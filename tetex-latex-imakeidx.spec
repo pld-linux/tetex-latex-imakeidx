@@ -12,9 +12,8 @@ Source0:	https://mirrors.ctan.org/install/macros/latex/contrib/%{short_name}.tds
 BuildRequires:	unzip
 Requires(post,postun):	/usr/bin/texhash
 Requires:	tetex-latex
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_enable_debug_packages	0
 
 %description
 The package enables the user to produce and typeset one or more
