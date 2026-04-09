@@ -1,7 +1,9 @@
+# TODO: rename to tex-latex-imakeidx.spec
 %define short_name imakeidx
 %define texhash [ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 
 Summary:	A package for producing multiple indexes
+Summary(pl.UTF-8):	Pakiet do tworzenia wielu indeksów
 Name:		tetex-latex-%{short_name}
 Version:	1.3e
 Release:	1
@@ -23,6 +25,15 @@ makeindex is used for processing the index entries, no particular
 setting up is needed when TeX Live is used. Using xindy or other
 programs it is necessary to enable shell escape; shell escape is also
 needed if splitindex is used.
+
+%description -l pl.UTF-8
+Ten pakiet umożliwia użytkownikom tworzenie i składanie jednego lub
+większej liczby indeksów jednocześnie wraz z dokumentem. Pakiet działa
+z dokumentami w LaTeXu przetwarzanymi przy użyciu programów pdfLaTeX,
+XeLaTeX i LuaLaTeX. Jeśli makeindex jest używany do przetwarzania
+wpisów indeksu, w przypadku używania TeX Live nie jest potrzebne żadna
+szczególna konfiguracja. Przy używaniu xindy lub innych programów
+konieczne jest włączenie ucieczki do powłoki.
 
 %prep
 %setup -q -c -n %{short_name}
